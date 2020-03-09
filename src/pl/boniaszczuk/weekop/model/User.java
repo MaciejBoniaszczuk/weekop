@@ -11,13 +11,15 @@ public class User {
 
     public User(){}
 
-    public User(long id, String username, String email, String password, boolean active) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.active = active;
+    public User(User user) {
+        this.id = user.id;
+        this.username = user.username;
+        this.email = user.email;
+        this.password = user.password;
+        this.active = user.active;
     }
+
+
 
     public long getId() {
         return id;
