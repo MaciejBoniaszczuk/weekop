@@ -15,16 +15,15 @@ public class Discovery {
 
     public Discovery(){}
 
-    public Discovery(long id, String name, String description, String url, Timestamp timestamp, User user,
-                     int upVote, int downVote) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.url = url;
-        this.timestamp = timestamp;
-        this.user = user;
-        this.upVote = upVote;
-        this.downVote = downVote;
+    public Discovery(Discovery discovery) {
+        this.id = discovery.id;
+        this.name = discovery.name;
+        this.description = discovery.description;
+        this.url = discovery.url;
+        this.timestamp = new Timestamp(discovery.timestamp.getTime());
+        this.user = new User(discovery.user);
+        this.upVote = discovery.upVote;
+        this.downVote = discovery.downVote;
     }
 
     public long getId() {
